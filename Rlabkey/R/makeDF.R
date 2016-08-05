@@ -192,11 +192,12 @@ return(filtered)
 .parseDate <- function(s)
 {
     s <- as.character(s);
-    d <- tryCatch(as.Date(s),error = function(e) NA);
-    if (any(is.na(d)))
-    {
-        d[is.na(d)] <- as.Date(s[is.na(d)], "%d %b %Y %H:%M:%S");
-    }
+    ## d <- tryCatch(as.Date(s),error = function(e) NA);
+    ## if (any(is.na(d)))
+    ## {
+    ##     d[is.na(d)] <- as.Date(s[is.na(d)], "%d %b %Y %H:%M:%S");
+    ## }
+    d <- as.POSIXct(s, "%Y/%m/%d %H:%M:%S")
     return(d);
 }
 
