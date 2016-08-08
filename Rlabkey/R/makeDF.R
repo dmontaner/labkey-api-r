@@ -197,7 +197,7 @@ return(filtered)
     ## {
     ##     d[is.na(d)] <- as.Date(s[is.na(d)], "%d %b %Y %H:%M:%S");
     ## }
-    d <- as.POSIXct(s, "%Y/%m/%d %H:%M:%S")
+    d <- as.POSIXct(s, format = "%Y/%m/%d %H:%M:%S")
     return(d);
 }
 
