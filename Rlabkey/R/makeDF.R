@@ -201,10 +201,10 @@ return(filtered)
     s <- as.character(s)
     d <- as.POSIXct(s, format = "%Y/%m/%d %H:%M:%S") ## This format will set to NA any other character string. It is good for 'null' values but may be bad for other formats as "%Y-%m-%d %H:%M:%S"
     t <- format(d, "%H-%M-%S")                       ## This keeps the time part of the variable in text format.
-    if all (t == "00-00-00") {                       ## This means that the value does never have a time part. We should then take the variable as a date.
+    if (all (t == "00-00-00", na.rm = TRUE)) {       ## This means that the value does never have a time part. We should then take the variable as a date.
         d <- as.Date(d)                              ## This will keep NA values
     }
-
+    
     return(d)
 }
 
