@@ -1,5 +1,6 @@
-Changes in version 2.1.130
+Changes in version 2.1.131
   o fix for Issue 26956
+  o added labkey.setDefaults support for baseUrl
 
 Changes in version 2.1.130
   o makeFilter() operators may now be either upper or lower case (formerly upper case only)
