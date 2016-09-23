@@ -50,6 +50,8 @@ labkey.getBaseUrl <- function(baseUrl=NULL)
 ## Executes an HTTP GET against the supplied URL, with standard handling for session, api key, status codes and error messages.
 labkey.get <- function(myurl)
 {
+    print (myurl) ##dmontaner
+
     ## Set options
     reader <- basicTextGatherer()
     header <- basicTextGatherer()
