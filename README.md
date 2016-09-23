@@ -1,3 +1,15 @@
+
+Changes in this branch (for my own usage): 
+
+- `labkey.get` prints the URL queried. It can be used to explore the JSON data in the browser.
+
+Install this branch: 
+
+    library (devtools)
+    install_github("dmontaner/labkey-api-r/Rlabkey", ref = "david")
+
+--------------------------------------------------------------------------------
+
 This file describes the sources for the Rlabkey package and a number of additional files and folders for developers intending to build the Rlabkey package.  
 
 
